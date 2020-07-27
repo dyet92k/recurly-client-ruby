@@ -59,9 +59,9 @@ module Recurly
     #     puts "Resource Not Found"
     #   end
     #
-    def get_site(site_id:)
+    def get_site(site_id:, **options)
       path = interpolate_path("/sites/{site_id}", site_id: site_id)
-      get(path)
+      get(path, **options)
     end
 
     # List a site's accounts
